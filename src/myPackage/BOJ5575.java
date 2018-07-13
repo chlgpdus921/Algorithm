@@ -16,7 +16,8 @@ public class BOJ5575 {
 		while (st.hasMoreTokens()) {
 			st = new StringTokenizer(br.readLine(), " ");
 			person_h[i] = Integer.parseInt(st.nextToken());
-		
+			person_m[i] = Integer.parseInt(st.nextToken());
+			person_s[i] = Integer.parseInt(st.nextToken());
 			i++;
 		}
 	}
