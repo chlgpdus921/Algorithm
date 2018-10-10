@@ -1,9 +1,9 @@
 package myPackage;
 
-public class BOJ2557 {
+public class BOJ10172 {
 
 	public static void main(String[] args) {
-	System.out.println("Hello World");
+		// TODO Auto-generated method stub
 
 	}
 
