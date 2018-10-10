@@ -1,4 +1,4 @@
-package myPackage;
+package realization;
 
 public class BOJ5212 {
 
