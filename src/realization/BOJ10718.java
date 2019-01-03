@@ -1,4 +1,4 @@
-package myPackage;
+package realization;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -11,7 +11,7 @@ public class BOJ10718 {
 		StringTokenizer st = new StringTokenizer(br.readLine(), "\n");
 		String a = br.readLine();
 		String b = "";
-		String c = " ";
+		String c = "";
 		c.concat(a+ "\n");
 		System.out.println(c);
 		while (st.hasMoreTokens()) {	
@@ -20,7 +20,7 @@ public class BOJ10718 {
 			b = st.nextToken();
 			c.concat(b + "\n");
 		}
-		System.out.println(c);
+				System.out.println(c);
 	}
 
 }

@@ -1,4 +1,4 @@
-package realization;
+package codeplus_java;
 
 public class BOJ2557 {
 
