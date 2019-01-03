@@ -1,4 +1,4 @@
-package myPackage;
+package codeplus_java;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,10 +11,10 @@ public class BOJ10824 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String a = br.readLine();
 		String[] line = a.split(" ");
-		int num1 = Integer.parseInt(line[0] +line[1]);
-		int num2 = Integer.parseInt(line[2] +line[3]);
-		
-	System.out.println(num1+num2);
+		int num1 = Integer.parseInt(line[0] + line[1]);
+		int num2 = Integer.parseInt(line[2] + line[3]);
+
+		System.out.println(num1 + num2);
 	}
 
 }
