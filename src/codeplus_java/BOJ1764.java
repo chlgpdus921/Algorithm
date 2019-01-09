@@ -1,4 +1,4 @@
-package myPackage;
+package codeplus_java;
 
 import java.util.*;
 import java.io.*;
@@ -11,27 +11,25 @@ public class BOJ1764 {
 		int n = Integer.valueOf(st.nextToken());
 		HashMap<String, Integer> nolisten = new HashMap<String, Integer>();
 		HashMap<String, Integer> nosee = new HashMap<String, Integer>();
-		
-		for(int i =0; i<m; i++){
+
+		for (int i = 0; i < m; i++) {
 			nolisten.put(br.readLine(), 1);
 		}
-		int l=0;String temp="";
-		for(int j =0; j<n; j++){
-			 temp = br.readLine();
-			if(nolisten.containsKey(temp)){
+		String temp = "";
+		for (int j = 0; j < n; j++) {
+			temp = br.readLine();
+			if (nolisten.containsKey(temp)) {
 				nosee.put(temp, 1);
-				l++;
 			}
 		}
 		System.out.println(nosee.size());
-		ArrayList <String> arr = new ArrayList<String>(nosee.size());
-		for(String a: nosee.keySet()){
+		ArrayList<String> arr = new ArrayList<String>(nosee.size());
+		for (String a : nosee.keySet()) {
 			arr.add(a);
 		}
 		Collections.sort(arr);
-	for(int i=0; i< arr.size(); i++){
-		System.out.println(arr.get(i));
+		for (int i = 0; i < arr.size(); i++) {
+			System.out.println(arr.get(i));
 		}
 	}
-
 }
