@@ -1,7 +1,9 @@
-package myPackage;
+package codeplus_java;
 
 import java.util.*;
+
 import java.io.*;
+
 class Point implements Comparable<Point> {
 	public int x_point, y_point;
 
@@ -9,6 +11,7 @@ class Point implements Comparable<Point> {
 		this.x_point = x;
 		this.y_point = y;
 	}
+
 	public int compareTo(Point that) {
 		if (this.x_point < that.x_point) {
 			return -1;
@@ -26,6 +29,7 @@ class Point implements Comparable<Point> {
 	}
 
 }
+
 public class BOJ11650 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -34,19 +38,18 @@ public class BOJ11650 {
 		Point[] a = new Point[n];
 		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
-			int x  = Integer.parseInt(st.nextToken());
-			int y  = Integer.parseInt(st.nextToken());
-			a[i] = new Point(x,y);
+			int x = Integer.parseInt(st.nextToken());
+			int y = Integer.parseInt(st.nextToken());
+			a[i] = new Point(x, y);
 		}
-		Arrays.sort(a, new Comparator<Point>(){
-			public int compare(Point p, Point p2){
-				return p.compareTo(p2);
-			}
-		});
-//		Arrays.sort(a);
+		/*
+		 * Arrays.sort(a, new Comparator<Point>(){ public int compare(Point p,
+		 * Point p2){ return p.compareTo(p2); } });
+		 */
+		Arrays.sort(a);
 		for (int i = 0; i < n; i++) {
 			System.out.println(a[i].x_point + " " + a[i].y_point);
 		}
-		}
+	}
 
 }
