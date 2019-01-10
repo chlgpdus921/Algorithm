@@ -1,4 +1,4 @@
-package myPackage;
+package codeplus_java;
 
 import java.io.*;
 import java.math.*;
