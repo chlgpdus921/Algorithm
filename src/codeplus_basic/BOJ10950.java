@@ -1,4 +1,4 @@
-package myPackage;
+package codeplus_basic;
 
 import java.util.*;
 import java.io.*;
