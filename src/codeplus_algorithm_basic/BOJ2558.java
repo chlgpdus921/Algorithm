@@ -1,4 +1,4 @@
-package codeplus_basic;
+package codeplus_algorithm_basic;
 
 import java.util.*;
 import java.io.*;
