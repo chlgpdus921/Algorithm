@@ -1,4 +1,4 @@
-package myPackage;
+package codeplus_algorithm_basic;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
