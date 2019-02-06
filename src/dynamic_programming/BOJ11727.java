@@ -1,4 +1,4 @@
-package myPackage;
+package dynamic_programming;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -14,11 +14,12 @@ public class BOJ11727 {
 		d[1] = 1;
 		System.out.println(tile(x));
 	}
+
 	public static int tile(int x) {
 		if (d[x] > 0) {
 			return d[x];
 		}
-		d[x] = (2 *tile(x - 2) + tile(x - 1)) % 10007;
+		d[x] = (2 * tile(x - 2) + tile(x - 1)) % 10007;
 		return d[x];
 	}
 
