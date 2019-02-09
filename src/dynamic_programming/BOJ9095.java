@@ -1,4 +1,4 @@
-package myPackage;
+package dynamic_programming;
 
 import java.io.*;
 
@@ -30,5 +30,4 @@ public class BOJ9095 {
 		d[n] = caculate(n - 1) + caculate(n - 2) + caculate(n - 3);
 		return d[n];
 	}
-
 }
