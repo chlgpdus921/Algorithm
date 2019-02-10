@@ -1,4 +1,4 @@
-package myPackage;
+package dynamic_programming;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -22,7 +22,6 @@ public class BOJ11052 {
 		for (i = 1; i <= n; i++) {
 			for (int j = 1; j <= i; j++) {
 				d[i] = Math.max(d[i], p[j] + d[i - j]);
-				System.out.println(d[i]+"  "+( p[j] + d[i - j]));
 			}
 		}
 		System.out.println(d[n]);
