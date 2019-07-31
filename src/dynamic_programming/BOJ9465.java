@@ -13,7 +13,7 @@ public class BOJ9465 {
 
 		for (int temp = 0; temp < t; temp++) {
 			int size = Integer.valueOf(br.readLine());
-			int[][] d = new int[2][size + 1];
+			int[][] d = new int[2][size + 2];
 			int[][] a = new int[2][size + 1];
 
 			for (int k = 0; k < 2; k++) {
@@ -25,27 +25,21 @@ public class BOJ9465 {
 				}
 			}
 
-			d[0][0] = a[0][0];
-			d[1][0] = a[1][0];
-			d[0][1] = d[1][0] + a[0][1];
-			d[1][1] = d[0][0] + a[1][1];
+			d[0][1] = a[0][0];
+			d[1][1] = a[1][0];
+
 			int i;
-			for (i = 2; i < size; i++) {
-				d[0][i] = max(d[1][i - 1] + a[0][i], d[0][i - 2] + a[0][i], d[1][i - 2] + a[0][i]);
-				d[1][i] = max(d[0][i - 1] + a[1][i], d[0][i - 2] + a[1][i], d[1][i - 2] + a[1][i]);
+			for (i = 2; i <= size; i++) {
+				d[0][i] = max(d[1][i - 1] + a[0][i - 1], d[0][i - 2] + a[0][i - 1], d[1][i - 2] + a[0][i - 1]);
+				d[1][i] = max(d[0][i - 1] + a[1][i - 1], d[0][i - 2] + a[1][i - 1], d[1][i - 2] + a[1][i - 1]);
 			}
-			sb.append(Math.max(d[0][i - 1], d[1][i - 1]) + "\n");
+			sb.append(Math.max(d[0][i - 1], d[1][i - 1]) + "\n"); 
 
 		}
 		System.out.println(sb);
 	}
 
 	public static int max(int a, int b, int c) {
-		if (a >= b && a >= c)
-			return a;
-		else if (b >= a && b >= c)
-			return b;
-		else
-			return c;
+		return Math.max(Math.max(a, b), c);
 	}
 }
