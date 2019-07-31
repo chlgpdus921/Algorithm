@@ -1,4 +1,4 @@
-package myPackage;
+package geometry;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,10 +12,11 @@ public class BOJ1485 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 
-		/* 네변의 길이가 같고, 그안의 대각선 또한 길이가 같아야 함 */
+		/* 네변의 길이가 같고, 그 안의 대각선 또한 길이가 같아야 함 총4개, 총2개 같아야함 */
 		int t = Integer.valueOf(br.readLine());
 		for (int i = 0; i < t; i++) {
 			int[][] d = new int[4][2];
+			/* input입력 */
 			for (int j = 0; j < 4; j++) {
 				st = new StringTokenizer(br.readLine());
 				d[j][0] = Integer.valueOf(st.nextToken());
