@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
+/* 500 -200 -400 50 50* -> 최소 배달 비용 : 950 */
 public class BOJ14943 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,7 +18,6 @@ public class BOJ14943 {
 			d[i] = Integer.valueOf(st.nextToken());
 			i++;
 		}
-		
-		
+			
 	}
 }
